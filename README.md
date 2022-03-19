@@ -2,8 +2,10 @@
 
 http://IP:8181   
 http://IP:8181/upload   
-or  
-http://IP/upload
+
+or using Traefik and docker-compose
+
+http://IP/upload   
 http://IP/upload/upload
 
 ## Dockerfile (place in /home/jortiz/http-server-upload/)
@@ -13,6 +15,10 @@ http://IP/upload/upload
     RUN pip install uploadserver
     CMD ["python", "-m", "uploadserver", "8181"]
 
+
+## Docker
+`docker build -t upload-server .`   
+`docker run --name upload-server -p 8181:8181 -v $PWD/files:/files upload-server`
 
 ## docker-compose.yml
     
