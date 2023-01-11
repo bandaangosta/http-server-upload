@@ -1,19 +1,23 @@
 ## Usage
 
-http://IP:8181   
-http://IP:8181/upload   
+http://<ip address or url>:8181   
+http://<ip address or url>:8181/upload   
 
 or using Traefik and docker-compose
 
-http://IP/upload   
-http://IP/upload/upload
+http://<ip address or url>/upload   
+http://<ip address or url>/upload/upload
+
+From command-line:
+
+    curl -F files=@file.zip -F token=my_token http://<ip address or url>:8181/upload
 
 ## Dockerfile (place in /home/jortiz/http-server-upload/)
 
     FROM python:3.7-alpine
     WORKDIR /files
     RUN pip install uploadserver
-    CMD ["python", "-m", "uploadserver", "8181"]
+    CMD ["python", "-m", "uploadserver", "8181", "-t", "my_token"]
 
 
 ## Docker
