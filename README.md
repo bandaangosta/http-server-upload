@@ -22,7 +22,7 @@ From command-line:
 
 ## Docker
 `docker build -t upload-server .`   
-`docker run --name upload-server -p 8181:8181 -v $PWD/files:/files upload-server`
+`docker run --name upload-server -p 8181:8181 -v $PWD/files:/files -u $UID upload-server`
 
 ## docker-compose.yml
     
