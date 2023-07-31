@@ -1,12 +1,12 @@
 ## Usage
 
-http://<ip address or url>:8181   
-http://<ip address or url>:8181/upload   
+http://\<ip address or url\>:8181   
+http://\<ip address or url\>:8181/upload   
 
 or using Traefik and docker-compose
 
-http://<ip address or url>/upload   
-http://<ip address or url>/upload/upload
+http://\<ip address or url\>/upload   
+http://\<ip address or url\>/upload/upload
 
 From command-line:
 
